@@ -1,0 +1,10 @@
+const SETTINGS = {
+    CANVAS_WIDTH: 900,
+    CANVAS_HEIGHT: 600,
+    CANVAS_GRID: 30,
+    CANVAS_BLOCK_GRID: 10,
+    CANVAS_COLOR: [10, 50, 20],
+    CANVAS_SECOND_COLOR: [50, 200, 50],
+}
+
+export default SETTINGS

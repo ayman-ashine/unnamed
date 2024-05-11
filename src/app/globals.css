@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --light: #eee;
+    --dark: #111;
+    --sh-light: #ffffff20;
+    --sh-dark: #00000020;
+  }
+  body {
+    @apply
+    bg-slate-900
+    flex justify-center items-center
+    w-screen h-screen overflow-hidden;
+  }
+}
+
+@layer components {
+  .main {
+    @apply
+    flex flex-col justify-center items-center
+    overflow-hidden gap-2;
+  }
+  .header {
+    @apply
+    bg-[rgb(10,15,20)] text-slate-200
+    w-full p-4 rounded-md text-base font-bold
+  }
+}
+
+
+@layer utilities {
+  .see {
+    @apply
+    border-2 border-red-500
+  }
+}
