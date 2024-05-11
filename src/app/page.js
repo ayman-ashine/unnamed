@@ -1,25 +1,25 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import sketch from "@/sketch"
+import setup_sketch from "@/sketch"
 
 export default function Home() {
 
   const refSketch = useRef(null)
 
   useEffect(() => {
-    if (refSketch.current)
-      refSketch.current = sketch
+    refSketch.current = setup_sketch()
     return () => {
       refSketch.current.remove()
     }
-  }, [sketch])
+  }, [setup_sketch])
 
   return (
     <main
       ref={refSketch}
       className="main"
     >
+      Home
     </main>
   )
 

@@ -1,6 +1,3 @@
-"use client"
-
-import p5 from "p5"
 import SETTINGS from "@/sketch/data/settings"
 import GROUND from "@/sketch/class/ground"
 
@@ -25,4 +22,9 @@ const sketch = (p) => {
 
 }
 
-export default new p5(sketch)
+const setup_sketch = () => {
+    const p5 = require("p5")
+    return new p5(sketch)
+}
+
+export default setup_sketch
