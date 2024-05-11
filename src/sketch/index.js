@@ -1,27 +1,13 @@
-import SETTINGS from "./data/settings"
-import NPC from "./class/npc"
-import GROUND from "./class/ground"
-import BLOCK from "./class/block"
+"use client"
+
+import p5 from "p5"
+import SETTINGS from "@/sketch/data/settings"
+import GROUND from "@/sketch/class/ground"
 
 const sketch = (p) => {
 
-    // var _NPC = new NPC(p)
-    var _CONTROLS = {
-        left: false,
-        right: false,
-        top: false,
-        bottom: false
-    }
     var _GROUND = new GROUND(p)
-    //var _BLOCK = new BLOCK(p, [90, 90])
-
-    // function setupPlayers(){
-    //     let list = []
-    //     for(let i=0; i<10; i++){
-    //         list.push(new NPC(p))
-    //     }
-    //     return list
-    // }
+    // var _NPC = new NPC(p)
 
     p.setup = () => {
         p.createCanvas(
@@ -32,23 +18,11 @@ const sketch = (p) => {
     }
 
     p.draw = () => {
-        p.background(SETTINGS.CANVAS_COLOR)
+        p.background([0, 0, 0])
         _GROUND.update()
         // _NPC.update()
-        //_BLOCK.update()
-    }
-
-    p.keyPressed = () => {
-        if (p.key === 'a') _CONTROLS.left = true
-        else _CONTROLS.left = false
-        if (p.key === 'd') _CONTROLS.right = true
-        else _CONTROLS.right = false
-        if (p.key === 'w') _CONTROLS.top = true
-        else _CONTROLS.top = false
-        if (p.key === 's') _CONTROLS.bottom = true
-        else _CONTROLS.bottom = false
     }
 
 }
 
-export default sketch
+export default new p5(sketch)

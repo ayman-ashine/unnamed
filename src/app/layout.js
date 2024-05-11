@@ -4,8 +4,8 @@ import { Quicksand } from "next/font/google";
 const font = Quicksand({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Shoot model",
-  description: "",
+  title: "Unnamed",
+  description: "Unnamed",
 };
 
 export default function RootLayout({ children }) {
