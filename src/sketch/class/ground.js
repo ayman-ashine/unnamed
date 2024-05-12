@@ -72,6 +72,7 @@ class GROUND {
     }
 
     #move() {
+        this.position.current[0] -= this.speed
         if (this.controls.left) this.position.current[0] += this.speed
         if (this.controls.right) this.position.current[0] -= this.speed
         if (this.controls.top) this.position.current[1] += this.speed
